@@ -19,7 +19,7 @@ services:
       retries: 5
 
   backend:
-    image: ddryad/tp2-6304455 -blogverse-backend:${BACKEND_VERSION:-latest}
+    image: ddryad/tp2-6304455-blogverse-backend:${BACKEND_VERSION:-latest}
     build:
       context: ./6304455-blogverse-backend
       dockerfile: Dockerfile
@@ -42,7 +42,7 @@ services:
         condition: service_healthy
 
   frontend:
-    image: ddryad/blogverse-frontend:${FRONTEND_VERSION:-latest}
+    image: ddryad/tp2-6304455-blogverse-frontend:${FRONTEND_VERSION:-latest}
     build:
       context: ./6304455-blogverse-frontend
       dockerfile: Dockerfile
